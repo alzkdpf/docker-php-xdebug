@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: php.7.0.1.Dockerfile
+    image: 'php-xdebug'
+    restart: always
+    ports:
+      - "80:80"
+    network_mode: "bridge"
